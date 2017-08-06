@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <style>
+  #tag_menu {
+      padding-left: 20%;
+      font-size: 17px;
+  }
+  #tag_menu li a{
+    color: #FFF;
+    text-decoration: none;
+  }
+  #tag_menu li a:hover{
+    color: #7D8385;
+  }
+  #logo{
+    padding-left: 10%;
+  }
+  @media screen and (max-width: 768px) {
+    #tag_menu {
+        padding-left: 0px;
+    }
+    #logo{
+      padding-left: 0 auto;
+    }
+  }
+  </style>
+  <nav class="navbar navbar-inverse" id="nav">
+        <div class="container-fluid" id="logo">
+          <div class="navbar-header">
+          <%= image_tag("template/logo.jpg",
+              :alt=>"Logo of me", :class=>"img-responsive", :style=> "width: 60px" ) %>
+          </div>
+          <ul class="nav navbar-nav" id="tag_menu">
+            <li><a href="/vetoi">Về tôi</a></li>
+            <li><a href="/sothich">Sở thích</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/lienlac">Liên lạc</a></li>
+          </ul>
+        </div>
+  </nav>
+  <body>
+    <%= yield %>
+  </body>
+</html>

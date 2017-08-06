@@ -1,0 +1,30 @@
+<style media="screen">
+  .container{
+    width: 80%;
+  }
+  h1{
+    color: #484741;
+    border-bottom: 1px solid #827495;
+    font-weight: bold;
+  }
+  #date{
+    color: #827495;
+    font-style: italic;
+  }
+  #mota{
+    font-size: 19px;
+  }
+  button{
+    background: #666666;
+    color: #FFF;
+    font-weight: bold;
+    height: 40px;
+  }
+</style>
+<div class="container">
+  <div class="col-md-12">
+    <h1><%= @blog.tieude %></h1>
+    <p id="date">Bởi: Phạm Đăng Hoàng, <%= @blog.date %></p>
+    <p id="mota"><%= @blog.noidung %></p>
+  </div>
+</div>

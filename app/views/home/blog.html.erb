@@ -1,0 +1,34 @@
+<style media="screen">
+  .container{
+    width: 70%;
+  }
+  h1{
+    color: #484741;
+    border-bottom: 1px solid #827495;
+    font-weight: bold;
+  }
+  #date{
+    color: #827495;
+    font-style: italic;
+  }
+  #mota{
+    font-size: 19px;
+  }
+  button{
+    background: #666666;
+    color: #FFF;
+    font-weight: bold;
+    height: 40px;
+  }
+</style>
+<% @blog.each do |blog| %>
+<div class="container">
+    <div class="col-md-12">
+      <h1><%= blog.tieude %></h1>
+      <p id="date">Bởi: Phạm Đăng Hoàng, <%= blog.date %></p>
+      <%= image_tag("about/rss.jpg", :alt =>"Day la anh cua toi", :class=>"img-responsive") %>
+      <p id="mota"><%= blog.mota %></p>
+        <a href="/blog/<%= blog.idblogs %>"><button type="button" name="button"> Đọc nhiều hơn</button></a>
+    </div>
+</div>
+ <% end %>
