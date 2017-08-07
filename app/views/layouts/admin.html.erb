@@ -4,14 +4,14 @@
     <title>Myblog</title>
     <%= favicon_link_tag 'favicon/favicon.png' %>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'adminst', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admintv', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
+    <%= render "layouts/header_admin" %>
     <div class="container">
             <%= yield %>
     </div>
-
+    <%= render "layouts/footer_admin" %>
   </body>
 </html>
