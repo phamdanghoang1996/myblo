@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post '/lienlac'=> 'home#postlienlac'
   get '/admin/getblog' => 'admin#getblog'
   post '/admin/postblog'=> 'admin#postblog'
+  get '/xinchao'
+  get '/branchNew'
 end
